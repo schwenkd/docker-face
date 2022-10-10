@@ -12,7 +12,7 @@ model = Sentiment(emotion_model_path, face_model_path)
 
 #We generate a new FastAPI app in the Prod environment
 #https://fastapi.tiangolo.com/
-app = FastAPI(title='Serverless Lambda FastAPI')
+app = FastAPI(title='Face Sentiment EC2 FastAPI')
 
 
 #The face-sentiment endpoint receives post requests with the image and returns the transformed image

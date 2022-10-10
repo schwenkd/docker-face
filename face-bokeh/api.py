@@ -12,7 +12,7 @@ model = DeepLabModel(model_path)
 
 #We generate a new FastAPI app in the Prod environment
 #https://fastapi.tiangolo.com/
-app = FastAPI(title='Serverless Lambda FastAPI')
+app = FastAPI(title='Face Bokeh EC2 FastAPI')
 
 
 #The face-bokeh endpoint receives post requests with the image and returns the transformed image

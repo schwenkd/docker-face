@@ -12,4 +12,7 @@ app = FastAPI(title='Health Check')
 #to receive both (face-bokeh and face-emotion)
 @app.get("/", tags=["Health Check"])
 async def root():
-    return {"message": "Ok"}
+    r1 = requests.get("http://34.201.243.175:8001/")
+    r2 = requests.get("http://34.201.243.175:8002/")
+
+    return {"face-bokeh-status": r1.reason, "face-emotion-status": r2.reason}
