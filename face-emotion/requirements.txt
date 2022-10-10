@@ -1,0 +1,7 @@
+numpy
+fastapi
+pydantic
+uvicorn
+python-multipart
+tensorflow
+opencv-python-headless

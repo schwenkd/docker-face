@@ -1,0 +1,21 @@
+version: "3.8"
+#Direct the main healthcheck to port 8000
+services:
+  main:
+    build: .
+    ports:
+      - "8000:8000"
+#Direct the face-bokeh to port 8001
+  face-bokeh:
+    build: .
+    depends_on:
+      - main
+    ports:
+      - "8001:8000"
+#Direct the face-emotion to port 8002
+  face-emotion:
+    build: ./face-emotion
+    depends_on:
+      - main
+    ports:
+      - "8002:8000"
